@@ -3,7 +3,7 @@ package quests;
 import java.util.Scanner;
 
 public class AdditionsSub {
-    private Scanner scanner;
+    public Scanner scanner;
 
     public AdditionsSub() {
         this.scanner = new Scanner(System.in);
