@@ -26,15 +26,11 @@ public class ArithmeticsSub {
     }
 
     public String divide(int firstNumber, int secondNumber) {
-        try {
-            if (secondNumber == 0) {
-                throw new ArithmeticException("Error!"); 
-            }
-            int divisionResult = firstNumber / secondNumber; 
-            int remainder = firstNumber % secondNumber; 
-            return String.format("[%d/%d]", divisionResult, remainder);
-        } catch (ArithmeticException e) {
+        if (firstNumber == 0 || secondNumber == 0) {
             return "Error!";
         }
+        int divisionResult = firstNumber / secondNumber;
+        int remainder = firstNumber % secondNumber;
+        return String.format("[%d/%d]", divisionResult, remainder);
     }
 }
