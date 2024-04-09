@@ -24,8 +24,9 @@ public class EncapsulationInputOutput {
 
             String divisionResult = calculations.divide();
             System.out.println("Division: " + divisionResult);
-        } catch (Exception e) {
-            
+        } 
+        catch (Exception e) {
+
         } 
         finally {
             scanner.close();

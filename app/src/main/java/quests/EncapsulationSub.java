@@ -24,7 +24,7 @@ public class EncapsulationSub {
         try {
             return this.firstNumber + this.secondNumber;
         } catch (Exception e) {
-            
+
         }
         return 0; 
     }
@@ -32,7 +32,8 @@ public class EncapsulationSub {
     public int subtract() {
         try {
             return this.firstNumber - this.secondNumber;
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
 
         }
         return 0;
@@ -55,7 +56,8 @@ public class EncapsulationSub {
             int divisionResult = this.firstNumber / this.secondNumber;
             int remainder = this.firstNumber % this.secondNumber;
             return String.format("[%d / %d]", divisionResult, remainder);
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
 
         }
         return "Error!";
