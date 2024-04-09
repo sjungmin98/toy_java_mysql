@@ -1,6 +1,7 @@
 package quests;
 
 import java.util.Scanner;
+import java.util.Optional;
 
 public class EncapsulationInputOutput {
     private Scanner scanner;
@@ -22,11 +23,15 @@ public class EncapsulationInputOutput {
             calculations.setFirstNumber(firstNumber);
             calculations.setSecondNumber(secondNumber);
 
-            String divisionResult = calculations.divide();
-            System.out.println("Division: " + divisionResult);
+            Optional<String> divisionResult = calculations.divide();
+            if (!divisionResult.isPresent()) {
+                System.out.println("Error!");
+            } else {
+                System.out.println("Division: " + divisionResult.get());
+            }
         } 
         catch (Exception e) {
-
+            
         } 
         finally {
             scanner.close();

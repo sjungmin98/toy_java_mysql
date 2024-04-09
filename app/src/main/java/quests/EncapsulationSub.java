@@ -1,5 +1,7 @@
 package quests;
 
+import java.util.Optional;
+
 public class EncapsulationSub {
     private int firstNumber;
     private int secondNumber;
@@ -23,7 +25,8 @@ public class EncapsulationSub {
     public int add() {
         try {
             return this.firstNumber + this.secondNumber;
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
 
         }
         return 0; 
@@ -42,24 +45,19 @@ public class EncapsulationSub {
     public int multiply() {
         try {
             return this.firstNumber * this.secondNumber;
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
 
         }
         return 0;
     }
 
-    public String divide() {
-        try {
-            if (this.secondNumber == 0) {
-                return "Error!";
-            }
-            int divisionResult = this.firstNumber / this.secondNumber;
-            int remainder = this.firstNumber % this.secondNumber;
-            return String.format("[%d / %d]", divisionResult, remainder);
-        } 
-        catch (Exception e) {
-
+    public Optional<String> divide() {
+        if (this.secondNumber == 0) {
+            return Optional.empty();
         }
-        return "Error!";
+        int divisionResult = this.firstNumber / this.secondNumber;
+        int remainder = this.firstNumber % this.secondNumber;
+        return Optional.of(String.format("[%d / %d]", divisionResult, remainder));
     }
 }
