@@ -26,7 +26,7 @@ public class ArithmeticsSub {
     }
 
     public String divide(int firstNumber, int secondNumber) {
-        if (firstNumber == 0 || secondNumber == 0) {
+        if (secondNumber == 0) {
             return "Error!";
         }
         int divisionResult = firstNumber / secondNumber;
